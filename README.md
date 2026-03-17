@@ -1,129 +1,161 @@
-# 🏛️ Government Central Helpline — AI-Powered Grievance Redressal System
+# 🏛️ Government Central Helpline
+### AI-Powered Multi-Channel Grievance Redressal System
+**Pravi AI Builder Assessment | March 2026**
 
-## 📋 Problem Statement
-Citizens face issues like water leakage, road damage, electricity failures — but current grievance systems suffer from:
-- ❌ **No single entry point** — citizens don't know whom to contact
-- ❌ **No tracking** — complaints disappear into a black hole
-- ❌ **No accountability** — officers delay without consequence
-- ❌ **Manual sorting** — slow, error-prone, and unscalable
+---
 
-## 💡 Our Solution
-A **centralized, AI-powered multi-channel grievance redressal system** that:
-- Collects complaints from **5 channels** (Phone, WhatsApp, Email, Web, Walk-in)
-- Uses **AI to auto-categorize** complaints to the correct department
-- Assigns **smart priority** based on urgency keywords
-- Detects **citizen sentiment** (frustration level) for proactive response
-- Provides a **Supervisor Dashboard** with real-time analytics and AI insights
+## 📌 Problem Statement
+
+Citizens face daily issues — water leakage, road damage, power failures — but current government complaint systems are broken:
+
+| Problem | Impact |
+|---------|--------|
+| ❌ No single entry point | Citizens don't know whom to contact |
+| ❌ No complaint tracking | Complaints disappear — no status updates |
+| ❌ No accountability | Officers delay without consequence |
+| ❌ Manual sorting | Slow, error-prone, 5 complaints/min max |
+| ❌ No data insights | Government can't identify systemic issues |
+
+> **Core Question:** *How to manage and track public complaints efficiently, transparently, and at scale?*
+
+---
+
+## 💡 Solution Overview
+
+A **centralized, AI-powered system** where all complaints come in, get auto-processed by AI, routed to the correct officer, and monitored by supervisors — with full citizen transparency.
+
+> *"Like Amazon customer support — but for government grievances."*
 
 ---
 
 ## 🔄 System Workflow
 
 ```
-Citizen → Multi-Channel Input → Central Database → AI Processing → Auto-Assignment → Officer Action → Supervisor Monitoring
+┌──────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+│  CITIZEN  │───▶│ MULTI-CHANNEL│───▶│   CENTRAL    │───▶│     AI       │───▶│    AUTO      │───▶│   OFFICER    │───▶│  SUPERVISOR  │
+│  Submits  │    │    INPUT     │    │  DATABASE    │    │  PROCESSING  │    │  ASSIGNMENT  │    │   ACTION     │    │  DASHBOARD   │
+│ Complaint │    │ Phone/Web/WA │    │ Stores All   │    │ Categorize   │    │ Route to Dept│    │ Investigate  │    │ Monitor All  │
+└──────────┘    └──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
+                                                                                                       │                    │
+                                                                                                       ▼                    ▼
+                                                                                                ┌──────────────┐    ┌──────────────┐
+                                                                                                │ Update Status│    │  Escalation  │
+                                                                                                │ Add Notes    │    │  If Delayed   │
+                                                                                                └──────────────┘    └──────────────┘
 ```
 
-| Step | What Happens | Who |
-|------|-------------|-----|
-| 1. Collect | Citizen files complaint via any channel | Citizen |
-| 2. Store | Saved in central database with unique ID | System |
-| 3. Process | AI categorizes, assigns priority, detects sentiment | AI Engine |
-| 4. Route | Auto-assigned to correct department officer | System |
-| 5. Act | Officer investigates, takes action, updates status | Officer |
-| 6. Monitor | Supervisor tracks KPIs, flags delays, reads AI insights | Supervisor |
-| 7. Track | Citizen checks status using complaint ID | Citizen |
+### Step-by-Step Flow:
+
+| Step | Action | Who | What Happens |
+|------|--------|-----|-------------|
+| 1 | **Collect** | Citizen | Files complaint via Phone / WhatsApp / Email / Web / Walk-in |
+| 2 | **Store** | System | Saved in central database with unique Complaint ID |
+| 3 | **Process** | AI Engine | Auto-categorizes → assigns priority → detects sentiment |
+| 4 | **Route** | AI Engine | Auto-assigns to correct department officer |
+| 5 | **Act** | Officer | Investigates on field, updates status, adds notes |
+| 6 | **Monitor** | Supervisor | Real-time dashboard, flags delays, reads AI insights |
+| 7 | **Track** | Citizen | Checks status anytime using Complaint ID |
 
 ---
 
-## 🤖 AI Features
+## 👥 System Users & Roles
 
-| Feature | How It Works | Example |
-|---------|-------------|---------|
-| **Auto-Categorization** | Keyword-based NLP classifies complaints | "Water pipe burst" → Water Dept |
-| **Smart Priority** | Urgency keywords trigger priority levels | "children suffering" → 🔴 Urgent |
-| **Sentiment Analysis** | Detects frustration from anger keywords | "pathetic, negligent" → 😡 Very Frustrated |
-| **AI Insights** | Generates daily governance summary | "Top issue: Water in Zone A" |
-
----
-
-## 📱 Modules (5 Pages)
-
-| Module | Description |
-|--------|-------------|
-| 🏠 **Home & Overview** | KPI dashboard, system workflow, channels, AI capabilities showcase |
-| 📝 **File Complaint** | Citizen complaint form with real-time AI processing |
-| 🔍 **Track Complaint** | Search by Complaint ID — see status timeline & officer notes |
-| 👷 **Officer Panel** | Filter, view, and resolve complaints with status updates |
-| 📊 **Supervisor Dashboard** | Analytics charts, AI insights, attention table, CSV export |
+| User | Role | What They Do |
+|------|------|-------------|
+| 👤 **Citizen** | Complainant | Submits complaint, tracks status using ID |
+| 📞 **GC Operator** | Data Entry | Receives from all channels, enters into system |
+| 🤖 **AI Engine** | Auto-Processor | Categorizes, prioritizes, detects sentiment |
+| 👷 **Background Officer** | Field Action | Investigates assigned complaints, resolves issues |
+| 📊 **Supervisor** | Monitor | Watches KPIs, flags delays, makes policy decisions |
 
 ---
 
-## 🛠️ Current Tech Stack (Prototype)
+## 🤖 AI Engine — The Smart Brain
 
-| Layer | Technology | Why |
-|-------|-----------|-----|
-| **Frontend + Backend** | Python + Streamlit | Rapid prototyping — idea to working app in 2 hours |
-| **AI/NLP Engine** | Custom keyword-based categorization | Lightweight, no API dependency, works offline |
-| **Data Handling** | Pandas + Session State | In-memory storage for demo, fast analytics |
-| **Visualization** | Streamlit Charts | Built-in bar charts, metrics, dataframes |
-| **Deployment** | Streamlit Cloud | Free, instant deployment with GitHub integration |
+### Feature 1: Auto-Categorization
+AI reads complaint text → identifies the correct department automatically.
+
+| Complaint Text | AI Category | Routed To |
+|---------------|-------------|-----------|
+| "Water pipe burst in colony" | Water Supply | Water Dept - Sh. Mehta |
+| "Pothole on MG Road near school" | Roads & Infrastructure | Roads Dept - Sh. Shah |
+| "Streetlight not working since 2 weeks" | Electricity | Electricity Dept - Sh. Joshi |
+| "Garbage not collected for 1 week" | Sanitation & Waste | Sanitation Dept - Sh. Verma |
+
+**How:** Keyword-based NLP engine that matches complaint text against category keyword dictionaries.  
+**Future:** Replace with GPT-4/Claude API for 99% accuracy.
+
+### Feature 2: Smart Priority Scoring
+AI detects urgency from keywords and assigns priority level.
+
+| Priority | Trigger Keywords | Example |
+|----------|-----------------|---------|
+| 🔴 **Urgent** | emergency, danger, fire, children, elderly, flood | "No water since 5 days, children suffering" |
+| 🟠 **High** | broken, leaked, not working, 3 days, health risk | "Transformer broken, power outage" |
+| 🟡 **Medium** | general complaints without urgency indicators | "Irregular water timing" |
+
+**Value:** Urgent cases get attention FIRST — not just first-come-first-served.
+
+### Feature 3: Sentiment Analysis
+AI detects citizen frustration level from the language used.
+
+| Sentiment | Detection | Action |
+|-----------|-----------|--------|
+| 😡 **Very Frustrated** | 2+ anger words (pathetic, negligent, worst) | Immediate escalation to Supervisor |
+| 😠 **Frustrated** | 1 anger word (angry, terrible, useless) | Flag for priority communication |
+| 😐 **Neutral** | Calm, factual complaint | Normal processing |
+
+**Value:** Flags frustrated citizens BEFORE they escalate to media/courts. Proactive governance.
 
 ---
 
-## 🚀 Future Tech Stack (Production-Ready)
+## 📱 Application Modules (5 Pages)
 
-### Frontend
-| Technology | Purpose |
-|-----------|---------|
-| **React.js / Next.js** | Production-grade responsive web UI |
-| **React Native / Flutter** | Mobile app for citizens and officers |
-| **Tailwind CSS** | Modern, consistent UI design system |
+### Module 1: 🏠 Home & Overview
+- KPI Dashboard (Total, Open, In Progress, Resolved, Resolution Rate)
+- System Workflow visualization (4-step flow with arrows)
+- Multi-Channel support showcase (Phone, WhatsApp, Email, Web, Walk-in)
+- AI Capabilities cards with examples
+- Recent Complaints list with status indicators
 
-### Backend
-| Technology | Purpose |
-|-----------|---------|
-| **FastAPI / Django** | REST API server with authentication |
-| **JWT + OAuth 2.0** | Role-based access (Citizen/Officer/Supervisor) |
-| **Celery + Redis** | Async task queue for notifications and escalations |
+### Module 2: 📝 File Complaint (Citizen Portal)
+- Complaint form: Name, Phone, Channel, Area, Description
+- On submit → AI instantly processes:
+  - Auto-categorizes to correct department
+  - Assigns priority (Urgent/High/Medium)
+  - Detects sentiment (Frustrated/Neutral)
+  - Auto-assigns to officer
+- Returns unique Complaint ID for tracking
 
-### AI/ML Layer
-| Technology | Purpose |
-|-----------|---------|
-| **GPT-4 / Claude API** | 99% accurate complaint categorization via LLM |
-| **Hugging Face Transformers** | Fine-tuned sentiment analysis model |
-| **spaCy / NLTK** | Named entity recognition for location extraction |
-| **Scikit-learn** | Predictive analytics — forecast complaint volumes |
+### Module 3: 🔍 Track Complaint
+- Search by Complaint ID
+- Shows: full details, AI analysis, officer notes
+- **Status Timeline**: Step 1 (Received) → Step 2 (Investigating) → Step 3 (Resolved)
+- Visual progress indicators (✅ complete, ⏳ pending)
 
-### Database
-| Technology | Purpose |
-|-----------|---------|
-| **PostgreSQL** | Primary relational database for complaints |
-| **MongoDB** | Document store for unstructured complaint attachments |
-| **Redis** | Caching layer for dashboard performance |
-| **Elasticsearch** | Full-text search across all complaints |
+### Module 4: 👷 Officer Panel
+- Filter complaints by Status / Category / Priority
+- Expand any complaint to see:
+  - Full complaint text
+  - AI analysis (category, priority, sentiment)
+  - Citizen contact details
+- Update status (Open → In Progress → Resolved)
+- Add investigation notes
 
-### Infrastructure
-| Technology | Purpose |
-|-----------|---------|
-| **AWS / Azure / GCP** | Cloud hosting — auto-scaling for 10,000+ users |
-| **Docker + Kubernetes** | Containerized microservices deployment |
-| **Nginx** | Load balancer and reverse proxy |
-| **GitHub Actions** | CI/CD pipeline for automated testing and deployment |
-
-### Communication
-| Technology | Purpose |
-|-----------|---------|
-| **Twilio API** | SMS notifications to citizens on status updates |
-| **WhatsApp Business API** | Receive complaints via WhatsApp |
-| **SendGrid** | Email notifications |
-| **Firebase Cloud Messaging** | Push notifications for mobile app |
-
-### Monitoring & Analytics
-| Technology | Purpose |
-|-----------|---------|
-| **Grafana + Prometheus** | System health monitoring |
-| **Power BI / Metabase** | Advanced analytics dashboards for policy makers |
-| **GIS / Mapbox** | Geographic complaint heatmaps |
+### Module 5: 📊 Supervisor Dashboard
+- Real-time KPIs (Total, Open, Progress, Resolved, Rate)
+- Analytics Charts:
+  - Complaints by Category (bar chart)
+  - Complaints by Area (bar chart)
+  - Status Distribution (bar chart)
+  - Priority Distribution (bar chart)
+- AI-Generated Daily Insights:
+  - Top issue category & hotspot area
+  - Urgent cases count
+  - Frustrated citizen alerts
+  - Recommendations for resource allocation
+- Attention Table (unresolved complaints)
+- CSV Export for offline analysis
 
 ---
 
@@ -131,35 +163,109 @@ Citizen → Multi-Channel Input → Central Database → AI Processing → Auto-
 
 ```
 Complaint {
-    complaint_id    : String     (Unique - GHC-YYYYMMDD-XXXX)
-    citizen_name    : String
-    phone           : String
-    channel         : Enum       (Phone, WhatsApp, Email, Web, Walk-in)
-    area            : String     (Zone/Location)
-    complaint_text  : Text
-    category        : String     (AI-assigned: Water, Roads, Electricity...)
-    priority        : Enum       (Urgent, High, Medium, Low)
-    sentiment       : String     (AI-detected: Frustrated, Neutral)
-    status          : Enum       (Open → In Progress → Resolved)
-    assigned_officer: String     (Auto-assigned by AI)
-    officer_notes   : Text
-    submitted_date  : DateTime
-    updated_date    : DateTime
+    complaint_id     : String     → Unique ID (GHC-YYYYMMDD-XXXX)
+    citizen_name     : String     → Who complained
+    phone            : String     → Contact number
+    channel          : Enum       → Phone | WhatsApp | Email | Web | Walk-in
+    area             : String     → Zone / Location
+    complaint_text   : Text       → Detailed description
+    category         : String     → AI-assigned (Water, Roads, Electricity...)
+    priority         : Enum       → Urgent | High | Medium | Low
+    sentiment        : String     → AI-detected (Very Frustrated, Frustrated, Neutral)
+    status           : Enum       → Open → In Progress → Resolved
+    assigned_officer : String     → Auto-assigned by department
+    officer_notes    : Text       → Investigation updates
+    submitted_date   : DateTime   → When filed
+    updated_date     : DateTime   → Last action date
 }
 ```
 
 ---
 
+## 🛠️ Current Tech Stack (Prototype)
+
+| Layer | Technology | Reason |
+|-------|-----------|--------|
+| Frontend + Backend | **Python + Streamlit** | Rapid prototyping — working app in 2 hours |
+| AI Engine | **Keyword-based NLP** | Lightweight, no API needed, works offline |
+| Data | **Pandas + Session State** | In-memory storage, fast analytics |
+| Charts | **Streamlit built-in** | Bar charts, metrics, dataframes |
+| Deployment | **Streamlit Cloud** | Free, instant, GitHub-integrated |
+
+---
+
+## 🚀 Production Tech Stack (Future)
+
+### Frontend
+| Technology | Purpose |
+|-----------|---------|
+| React.js / Next.js | Production web UI with responsive design |
+| React Native / Flutter | Mobile app for citizens & field officers |
+
+### Backend
+| Technology | Purpose |
+|-----------|---------|
+| FastAPI / Django | REST API with authentication |
+| JWT + OAuth 2.0 | Role-based access control |
+| Celery + Redis | Async notifications & auto-escalation |
+
+### AI/ML Layer
+| Technology | Purpose |
+|-----------|---------|
+| GPT-4 / Claude API | 99% accurate categorization via LLM |
+| Hugging Face Transformers | Fine-tuned sentiment model |
+| Scikit-learn | Predictive analytics for complaint volume forecasting |
+
+### Database & Infrastructure
+| Technology | Purpose |
+|-----------|---------|
+| PostgreSQL | Relational database for complaints |
+| Redis | Caching for dashboard performance |
+| AWS / Azure | Cloud hosting with auto-scaling |
+| Docker + Kubernetes | Containerized microservices |
+
+### Communication
+| Technology | Purpose |
+|-----------|---------|
+| Twilio API | SMS status updates to citizens |
+| WhatsApp Business API | Receive complaints via WhatsApp |
+| Firebase | Push notifications for mobile app |
+
+---
+
 ## 📈 Expected Impact
 
-| Metric | Before | After |
-|--------|--------|-------|
+| Metric | Before (Manual) | After (Our System) |
+|--------|-----------------|-------------------|
 | Complaint tracking | ~40% | **100%** |
 | Categorization speed | 5/min (manual) | **100+/min (AI)** |
 | Resolution time | 7-15 days | **3-5 days** |
-| Citizen satisfaction | Low | **70%+ improvement** |
 | Lost complaints | Many | **Zero** |
+| Citizen satisfaction | Low | **70%+ improvement** |
 | Policy insights | None | **Real-time AI analytics** |
+
+---
+
+## ⚠️ Escalation Rules
+
+| Condition | Action |
+|-----------|--------|
+| Complaint open > 3 days | Auto-escalate to Supervisor |
+| Sentiment = Very Frustrated | Flag for immediate attention |
+| Officer no update in 48 hours | Auto-notify Supervisor |
+| Complaint resolved | Notify citizen via SMS |
+
+---
+
+## 🧠 Design Thinking Approach
+
+| Phase | What I Did |
+|-------|-----------|
+| **1. Empathize** | Understood citizen pain — complaints lost, no tracking, no accountability |
+| **2. Define** | Core problem: no centralized, intelligent complaint management system |
+| **3. Ideate** | AI can automate categorization, priority, and routing — replacing manual GC work |
+| **4. Prototype** | Built working Streamlit app with 5 interactive modules |
+| **5. Validate** | Tested with 6 realistic complaints across all categories and priorities |
 
 ---
 
@@ -169,13 +275,3 @@ Complaint {
 pip install -r requirements.txt
 streamlit run helpline_app.py
 ```
-
----
-
-## 🧠 Design Thinking Approach
-
-1. **Empathize** — Understood citizen pain: complaints lost, no tracking, no accountability
-2. **Define** — Core problem: lack of centralized, intelligent complaint management
-3. **Ideate** — AI can automate categorization, priority, and routing (replacing manual GC work)
-4. **Prototype** — Built working Streamlit app with 5 modules in 2 hours
-5. **Test** — Demo with realistic data, validated all user flows end-to-end
